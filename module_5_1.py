@@ -6,7 +6,7 @@ class House:
         return object.__new__(cls)
 
     def __del__(self):
-        print(f"{self.name} снесен, но он останется в истории")
+        print(f"{self.name} снесен, но он останется в истории0")
         del self
 
     def __init__(self, name, floors):
