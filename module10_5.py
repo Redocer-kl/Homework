@@ -19,4 +19,6 @@ if __name__ == "__main__":
         proceses.append(multiprocessing.Process(target=read_info, args=(name,)))
     for process in proceses:
         process.start()
+    for process in proceses:
+        process.join()
     print("Время выполнения в мультипотоке", time.time() - start_time)
