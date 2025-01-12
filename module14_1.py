@@ -1,10 +1,10 @@
 import sqlite3
 
-# Создаём базу данных и подключаемся к ней
+
 connection = sqlite3.connect('not_telegram.db')
 cursor = connection.cursor()
 
-# Создание таблицы Users, если она ещё не создана
+
 cursor.execute('''
 CREATE TABLE IF NOT EXISTS Users (
     id INTEGER PRIMARY KEY,
@@ -22,7 +22,7 @@ cursor.execute('UPDATE Users SET balance = 500 WHERE id % 2 = 1')
 
 cursor.execute('DELETE FROM Users WHERE id % 3 = 1')
 
-# Смотрим все записи, где возраст не равен 60
+
 cursor.execute('SELECT username, email, age, balance FROM Users WHERE age != 60')
 rows = cursor.fetchall()
 
