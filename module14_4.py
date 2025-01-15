@@ -7,7 +7,7 @@ from telethon.tl.types import ReplyKeyboardMarkup
 import crud_functions
 
 
-API_TOKEN = "8065000752:AAGhRz8GgcNHLbWqsW_QwwqIhtYKjGZc9l8"
+API_TOKEN = ""
 bot = Bot(token=API_TOKEN)
 storage = MemoryStorage()
 dp = Dispatcher(bot, storage=storage)
